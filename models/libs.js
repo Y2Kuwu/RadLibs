@@ -1,28 +1,36 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const reviewSchema = new Schema({
+  content: String,
+  rating: {type: Number, min: 1, max: 5, default: 5},
+  user: {type: Schema.Types.ObjectId, ref: 'User'},
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true
+});
 
+const movieSchema = new Schema({   //template body
+  title: {                          //temp type
+    type: String,                   //word count
+    required: true                  //fill in words
+  },                                //save ..etc
+  releaseYear: {
+    type: Number,
+    default: function () {
+      return new Date().getFullYear();
+    }
+  },
+  mpaaRating: String,
+  cast: [{
+    type:Schema.Types.ObjectId,
+    ref: 'Performer'
+  }],
+  nowShowing: { type: Boolean, default: false },
+  reviews: [reviewSchema]
+}, {
+  timestamps: true
+});
 
-// const createTempSchema = new Schema({
-
-// })
-
-// const randTempSchema = new Schema({
-
-// })
-
-// const catTempSchema = new Schema({
-
-// })
-
-const libSchema = new Schema({
-    // tempCreate: { type : Boolean, default: false },
-    // tempRandom: { type : Boolean, default: false },
-    // tempCategory: { type : Boolean, default: false },
-    
-    libBody : {type: String = []},
-    // templateType : [createTempSchema , randTempSchema , catTempSchema]
-    
-    })
-
-module.exports = mongoose.model('Lib' , libSchema);
+module.exports = mongoose.model('Movie', movieSchema);

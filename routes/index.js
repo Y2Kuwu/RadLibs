@@ -1,9 +1,32 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');  //requiring module
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/movies');
 });
 
+
+//google login
+router.get('/auth/google', passport.authenticate(
+
+  'google',  ///requiring strategy
+  {scope: ['profile', 'email']}   //requirements from google aka scope
+))
+
+//google callback route
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+successRedirect: '/movies',    //redirect to home if authenticated 
+failureRedirect: '/movies'
+
+  }
+))//google log out
+router.get('/logout', function (req,res){
+  req.logOut();
+  res.redirect('/movies')
+})
+
 module.exports = router;
+
