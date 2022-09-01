@@ -9,8 +9,15 @@
 </head>
 <body>
   <nav>
-    <a href="/new" <%- title === 'Sign' ? 'class="active"' : '' %>>Sign In</a>
-    <a href="/lib/index" <%- title === 'New' ? 'class="active"' : '' %>>New Template</a>
+    <a href="/characters" <%- title === 'Character' ? 'class="active"' : '' %>>All Characters</a>
+    <% if (user) { %>
+      <a href="/acc/new"	<%- title === 'Add Acc' ? 'class="active"' : '' %>>
+      Add Accessory</a>
+      <a href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>>Add Character</a>
+      <a href="/logout">LOG OUT</a>
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" id = "googimg"></a>
+    <% } %>
   </nav>
   <main>
     <h1><%= title %></h1>

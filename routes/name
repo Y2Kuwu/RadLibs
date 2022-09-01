@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+
+const nameCtrl = require('../controllers/name');
+
+// http://localhost:3000/character/123/name
+router.post("/characters/:id/name", nameCtrl.create);
+
+// http://localhost:3000/character/name/123nodemon
+router.delete("/name/:id" , nameCtrl.delete);
+
+module.exports = router;

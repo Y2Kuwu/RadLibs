@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<table id="list">
+  <thead>
+    <tr>
+      
+    
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% character.forEach(function(m) { %>
+      <tr>
+        <td><%= m.charSel %></td>
+        <td><a href="/character/<%= m._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+
