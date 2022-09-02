@@ -10,8 +10,9 @@
   <tbody>
     <% character.forEach(function(m) { %>
       <tr>
-        <td><%= m.charSel %></td>
-        <td><a href="/character/<%= m._id %>">DETAILS</a></td>
+        <td><%= m.name %></td>
+        <td><%= m.char %></td>
+        <td><a href="/characters/<%= m._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
     </tbody>

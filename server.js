@@ -1,11 +1,16 @@
 var createError = require('http-errors');
 var express = require('express');
+
+
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
+// const multer = require('multer');
+// const GridFSBucket = require('multer-gridfs-storage');
 
 var logger = require('morgan');
 
@@ -16,12 +21,17 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var characterRouter = require('./routes/characters');
-var nameRouter = require('./routes/name');
-var accRouter = require('./routes/acc');
+//var nameRouter = require('./routes/name');
+////var accRouter = require('./routes/acc');
 
 
 
 var app = express();
+
+
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +45,7 @@ app.use(methodOverride('_method'));
 
 //session logic//
 var session = require('express-session');  //maintaining session while user is logged in
+const { config } = require('dotenv');
 app.use(session({
   secret: process.env.SECRET,
   resave: false,      //get away from depreciation warnings
@@ -53,8 +64,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/characters', characterRouter);
-app.use('/', nameRouter);
-app.use('/', accRouter);
+//app.use('/', nameRouter);
+//app.use('/', accRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

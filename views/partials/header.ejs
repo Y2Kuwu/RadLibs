@@ -11,8 +11,6 @@
   <nav>
     <a href="/characters" <%- title === 'Character' ? 'class="active"' : '' %>>All Characters</a>
     <% if (user) { %>
-      <a href="/acc/new"	<%- title === 'Add Acc' ? 'class="active"' : '' %>>
-      Add Accessory</a>
       <a href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>>Add Character</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
