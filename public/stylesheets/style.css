@@ -4,7 +4,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  background-color: black;
 }
 #googimg{
   width: 20px;
@@ -17,3 +18,34 @@ background-color: black;
 #new{
 background-color: black;
 }
+#ch{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#ne{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#pe{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#oc{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#ac{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#del{
+  text-align: center;
+  background-color: black;
+}
+
+

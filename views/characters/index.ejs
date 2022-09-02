@@ -1,18 +1,10 @@
 <%- include('../partials/header') %>
-<table id="list">
-  <thead>
-    <tr>
-      
-    
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+
     <% character.forEach(function(m) { %>
       <tr>
-        <td><%= m.name %></td>
-        <td><%= m.char %></td>
-        <td><a href="/characters/<%= m._id %>">DETAILS</a></td>
+        <td id = 'ne' ><%= m.name %></td>
+        <td id = 'ch' >[<%= m.char %>]</td>
+        <td><a href="/characters/<%= m._id %>">[DETAILS]</a></td>
       </tr>
       <% }); %>
     </tbody>

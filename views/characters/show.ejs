@@ -7,23 +7,20 @@
  <form id="ed" action="/characters/<%= character._id %>?_method=PUT" method="POST">
     
     <section id="show-page">
-    <div>Character: </div>
-    <div><%= character.char %></div>
-    <div>Name: </div>
-    <div><%= character.name %></div>
-    <div>Personality trait(s): </div>
-    <div><%= character.personality %></div>
-    <div>Occupation: </div>
-    <div><%= character.occupation %></div>
-    <div>Accessory: </div>
-    <div><%= character.accessory %></div>
+   <ul>
+    <li id = "ch">Character: <%= character.char %></li>
+    <li id = "ne">Name: <%= character.name %></li>
+    <li id = "pe">Personality trait(s): <%= character.personality %></li>
+    <li id = "oc">Occupation: <%= character.occupation %></li>
+    <li id = "ac">Accessory: <%= character.accessory %></li>
+    </ul>
 </form>
 </section>
     
 
 
 
-    <!-- end cast list -->
+   
 </section>
 <form id="del" action="/characters/<%= character._id %>/delete?_method=DELETE" method="POST">
     <button type = "submit">Delete</button>
