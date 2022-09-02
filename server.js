@@ -45,7 +45,7 @@ app.use(methodOverride('_method'));
 
 //session logic//
 var session = require('express-session');  //maintaining session while user is logged in
-const { config } = require('dotenv');
+
 app.use(session({
   secret: process.env.SECRET,
   resave: false,      //get away from depreciation warnings

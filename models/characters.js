@@ -15,16 +15,16 @@ accessory: Array
 
 
 
-// const nameSchema = new Schema({
+ const nameSchema = new Schema({
 //   name: String,
 //   occupation: String,
 
-//   user: {type: Schema.Types.ObjectId, ref: 'User'},  //dont touch
-//   userName: String,
-//   userAvatar: String
-// }, {
-//   timestamps: true
-// });
+   user: {type: Schema.Types.ObjectId, ref: 'User'},  //dont touch
+   userName: String,
+   userAvatar: String
+ }, {
+  timestamps: true
+ });
 // const fullChar = new Schema({
 // charSel : Array
 // })

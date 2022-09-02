@@ -7,10 +7,16 @@ router.get('/', characterCtrl.index);
 
 //Use is isLoggedIn middleware to protect routes
 router.get('/new', characterCtrl.new);
-router.get('/edit', characterCtrl.edit);
-router.get('/:id', characterCtrl.show);
-router.get('/:id', characterCtrl.edit);
+router.post('/:id', characterCtrl.edit);
+router.get('/:id/edit', characterCtrl.edit);
 
+router.get('/:id', characterCtrl.show);
+
+
+
+// router.delete('/:id', characterCtrl.die);
+
+router.delete('/:id', characterCtrl.die);
 router.post('/', isLoggedIn ,characterCtrl.create);
 
 
