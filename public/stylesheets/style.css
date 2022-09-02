@@ -9,4 +9,11 @@ a {
 #googimg{
   width: 20px;
   height: 20px;
+  background-color: black;
+}
+#chars{
+background-color: black;
+}
+#new{
+background-color: black;
 }

@@ -11,9 +11,9 @@
 </head>
 <body>
   <nav>
-    <a href="/characters">All Characters</a>
+    <a href="/characters" id="chars">All Characters</a>
     <% if (user) { %>
-      <a href="/characters/new" >Add Character</a>
+      <a href="/characters/new" id = "new">Add Character</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" id = "googimg"></a>

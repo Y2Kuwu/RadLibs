@@ -17,7 +17,6 @@
     <div><%= character.occupation %></div>
     <div>Accessory: </div>
     <div><%= character.accessory %></div>
-    <a href = "/characters/:id/edit/">Edit</a>
 </form>
 </section>
     
@@ -26,9 +25,9 @@
 
     <!-- end cast list -->
 </section>
-<form id="del" action="/characters/<%= character._id %>?_method=PUT" method="POST">
-<button type = "submit">Delete</button>
-</form>
+<form id="del" action="/characters/<%= character._id %>/delete?_method=DELETE" method="POST">
+    <button type = "submit">Delete</button>
+    </form>
 </section>
 
 

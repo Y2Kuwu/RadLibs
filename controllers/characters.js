@@ -53,14 +53,13 @@ function index(req, res){
   //     });
   // }
   
-  function die(req, res){
-    Character.findByIdAndDelete(req.params.id, (err ,character)=>{
-      // {_id: req.params.id, cre: req.user._id}, function(err) {
-        console.log(character)
+  function die(req, res) {
+    Character.findByIdAndDelete(req.params.id, (err, character) => {
+        // {_id: req.params.id, cre: req.user._id}, function(err) {
+        //console.log(character)
         res.redirect('/characters');
-       
-      });
-  }
+    });
+}
   
 
 
@@ -92,38 +91,38 @@ function index(req, res){
   // var charOccu = req.body.occupation;
   // var charAcce = req.body.accessory;
 
-  function create(req, res) {
-    Character.findById(req.params.id, function(err, character){
-    //  const character = new Character(req.body);
-     character.cre = req.user._id;
-    // req.body.userId = req.user._id;
-    // req.body.userName = req.user.name;
-    // character.
-    character.save(function(err) {
-      if (err) return res.redirect('/characters/new');
-      res.redirect(`/characters/${character._id}`);
-    });
-  })
-}
+//   function create(req, res) {
+//     Character.findById(req.params.id, function(err, character){
+//     //  const character = new Character(req.body);
+//     character = req.user._id;
+//     // req.body.userId = req.user._id;
+//     // req.body.userName = req.user.name;
+//     // character.
+//     character.save(function(err) {
+//       if (err) return res.redirect('/characters/new');
+//       res.redirect(`/characters/${character._id}`);
+//     });
+//   })
+// }
 
-//   function create(req, res){
-//     //Character.findById(req.params.id, function(err, character){
-//     Character.create({
-//     // req.body.user = req.user._id;//
-//     // req.body.userName = req.user.name;// 
-//     // req.body.userAvatar = req.user.avatar;//
-//     // new Character(req.body);
+  function create(req, res){
+    //Character.findById(req.params.id, function(err, character){
+    Character.create({
+    // req.body.user = req.user._id;//
+    // req.body.userName = req.user.name;// 
+    // req.body.userAvatar = req.user.avatar;//
+    // new Character(req.body);
     
 
-//   char: req.body.char,
-//   name: req.body.name,
-//   personality: req.body.personality,
-//   occupation: req.body.occupation,
-//   accessory: req.body.accessory
+  char: req.body.char,
+  name: req.body.name,
+  personality: req.body.personality,
+  occupation: req.body.occupation,
+  accessory: req.body.accessory
 
-//   });
-//   res.redirect("/characters");
-// }
+  });
+  res.redirect("/characters");
+}
 
 
 
