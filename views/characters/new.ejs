@@ -1,37 +1,71 @@
 
 <%- include('../partials/header') %>
-
+<table>
 <form id="newForm" action="/characters" method="POST">
-  <label>Character Type:</label>
-  <select type="text" name="char" id = 'ch'>
-  <option value="(.)_(.)">()_()</option>
-  <option value="._.">._.</option>
-  <option value="^_^">^_^</option>
-  <option value="o~o">o~o</option>
-  <option value="x_x">x_x</option>
-  <option value="|. _ .|">|. _ .|</option>
-  <option value="-*_*-">-*_*-</option>
-  <option value="!_!">!_!</option>
-  </select>
-  <label>Name:</label>
-  <input type = "text" name="name" id = 'ch'>
-  <label>Personality Trait:</label>
-  <input type = "text" name="personality" id = 'ch'>
-  <label>Occupation:</label>
-  <input type = "text" name="occupation" id = 'ch'>
-  <label>Accessory:</label>
-  <select type="text" name="accessory" id = 'ch'>
-    <option value="bowl">Bowling ball</option>
-    <option value="scarf">Lead scarf</option>
-    <option value="collection">Spider collection</option>
-    <option value="job">A promising career</option>
-    <option value="cd">The Wiggles TM greatest hits (multi disk, remastered) </option>
-    <option value="batteries">A handful of hearing aid batteries</option>
-    <option value="bat">Wiffle bat</option>
-    <option value="hammock">Hammock for ten</option>
-    <option value="change">Spare change</option>
-    <option value="beanie">Beanie baby's baby</option>
-    <option value="reg">Regrets</option>
+  <tr>
+  <th> </th>
+  <th> </th>
+  <tr>
+    <td id = 'in'>Character Type: </td>
+    <td>
+    <select type="text" name="char" id = 'ch'>
+      <option value="(.)_(.)">()_()</option>
+      <option value="._.">._.</option>
+      <option value="^_^">^_^</option>
+      <option value="o~o">o~o</option>
+      <option value="x_x">x_x</option>
+      <option value="|. _ .|">|. _ .|</option>
+      <option value="-*_*-">-*_*-</option>
+      <option value="!_!">!_!</option>
+      </select>
+      </td>
+  </tr>
+  <tr>
+    <td id = 'in'>Name: </td>
+    <td>
+    <input type = "text" name="name" id = 'ch'>
+    </td>
+  </tr>
+  <tr>
+    <td id = 'in'>Personality Trait: </td>
+    <td>
+    <input type = "text" name="personality" id = 'ch'>
+    </td>
+  </tr>
+  <tr>
+    <td id = 'in'>Occupation: </td>
+    <td>
+    <input type = "text" name="occupation" id = 'ch'>
+    </td>
+  </tr>
+  <tr>
+    <td id = 'in'>Accessory: </td>
+    <td>
+      <select type="text" name="accessory" id = 'ch'>
+        <option value="bowl">Bowling ball</option>
+        <option value="scarf">Lead scarf</option>
+        <option value="collection">Spider collection</option>
+        <option value="job">A promising career</option>
+        <option value="cd">The Wiggles TM greatest hits (multi disk, remastered) </option>
+        <option value="batteries">A handful of hearing aid batteries</option>
+        <option value="bat">Wiffle bat</option>
+        <option value="hammock">Hammock for ten</option>
+        <option value="change">Spare change</option>
+        <option value="beanie">Beanie baby's baby</option>
+        <option value="reg">Regrets</option>
+    </td>
+  </tr>
+
+  </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   <input type="submit" value="Add Character" id = 'ch'>
 </form>

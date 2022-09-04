@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black
 }
 
 a {
@@ -10,64 +11,115 @@ a {
 #googimg{
   width: 20px;
   height: 20px;
-  background-color: maroon;
+  background-color: black;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #chars{
+  font-family: Silkscreen;
 background-color: black;
+outline-style: solid;
+  outline-color: maroon;
+  outline-width: 2px;
 }
 #new{
+  font-family: Silkscreen;
 background-color: black;
+outline-style: solid;
+  outline-color: maroon;
+  outline-width: 2px;
 }
 #ch{
+  font-family: Silkscreen;
   text-align: center;
   background-color: black;
   color: white;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #ne{
+  font-family: Silkscreen;
   text-align: center;
   background-color: black;
   color: white;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #pe{
+  font-family: Silkscreen;
   text-align: center;
   background-color: black;
   color: white;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #oc{
+  font-family: Silkscreen;
   text-align: center;
   background-color: black;
   color: white;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #ac{
+  font-family: Silkscreen;
   text-align: center;
   background-color: black;
   color: white;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
 }
 #del{
   color: maroon;
   font-family: Creepster;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: left;
   font-size: 75px;
   float: left; 
   width: 15%;
   height: 120px;
-
+  outline-style: double;
+  outline-width: 20px;
+  outline-color: maroon;
   background-color: black;
+  z-index: 1;
+  margin-top: 20px;
+
 }
 #showPage {
+  margin-top: 5px;
   display: flex;
-  flex: 50%;
+  font-size: 60px;
+  z-index: -1;
+  outline-style: solid;
+  outline-width: 5px;
+  outline-color: maroon;
 }
 #newForm {
   display: flex;
-  flex: 50%;
+  background-color: maroon;
+  font-family: Silkscreen;
+  display: inline-table;
+  
 }
 .dis{
+  font-family: Silkscreen;
   background-color: red;
   display: flex;
   flex: 50%;
   
+}
+.login{
+  font-family: Silkscreen;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 2px;
 }
 .deets{
   background-color: rgb(37, 30, 30);
@@ -77,9 +129,31 @@ background-color: black;
   
   width: 280px;
   height: 280px;
-  margin-top: -12px;
+  margin-top: 10px;
   margin-left: -100px;
 }
-
-
-<
+#all{
+  flex: auto;
+}
+#in{
+  font-family: Silkscreen;
+  background-color: aqua;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 5px;
+}
+#det{
+  font-family: Silkscreen;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 3px;
+  color: white;
+}
+#logOut{
+  font-family: Silkscreen;
+  outline-style: solid;
+  outline-color: maroon;
+  outline-width: 2px;
+ 
+  
+}
