@@ -4,7 +4,7 @@
  <!-- PAGE NEEDS WORK -->
 
 
- <form id="ed" action="/characters/<%= character._id %>?_method=PUT" method="POST">
+
    
     <section id="showPage">
    <div id = "all">
@@ -13,11 +13,10 @@
     <div id = "pe">Personality trait(s): <%= character.personality %></div>
     <div id = "oc">Occupation: <%= character.occupation %></div>
     <div id = "ac">Accessory: <%= character.accessory %></div>
-    </>
+    
 
-</form>
 </section>
-
+    <a href = "/characters/:id/edit">EDIT</a>
 
 
 

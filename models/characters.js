@@ -1,10 +1,22 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
+const imageSchema = new Schema({
+  imgname: String,
+  desc: String,
+  img:
+  {
+    data: Buffer,
+    contentType: String
+  }
+  },
+  {
+      timestamps:true
+  })
 
 const characterSchema = new Schema({
 char: Array,
+charActual : [imageSchema],
 name: String,
 personality: String,
 occupation: String, 

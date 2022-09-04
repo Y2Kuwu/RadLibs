@@ -14,7 +14,7 @@ var methodOverride = require('method-override');
 
 var logger = require('morgan');
 
-var imgModel = require('./models/img');
+//var imgModel = require('./models/img');
 
 require('dotenv').config(); // for .env file
 require('./config/database');

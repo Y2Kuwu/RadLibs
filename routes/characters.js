@@ -7,12 +7,14 @@ router.get('/', characterCtrl.index);
 
 //Use is isLoggedIn middleware to protect routes
 router.get('/new', characterCtrl.new);
-router.post('/:id', characterCtrl.edit);
-// router.get('/:id/edit', characterCtrl.edit);
+
+// router.put('/:id/edit', characterCtrl.edit);
+router.get('/:id/edit', characterCtrl.showEdit); //show added recieving undefined characters (good)     //not recieveing id with //characters at beg
+router.get('/:id/edit', characterCtrl.edit);  //
 
 router.get('/:id', characterCtrl.show);
 
-// router.delete('/:id', characterCtrl.die)
+//router.get('/:id', characterCtrl.die)
 router.delete('/:id/delete', characterCtrl.die); 
 router.post('/', isLoggedIn ,characterCtrl.create);
 

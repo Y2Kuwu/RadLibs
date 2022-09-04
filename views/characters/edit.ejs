@@ -1,15 +1,17 @@
 
 <%- include('../partials/header') %>
-  
-    <form action="/characters/<%= character._id %>" method="PUT">
+
+
+
+      <form action="/characters/" method="PUT">
         <!-- Value attribute is being set to the comment's current text -->
-        <input name="text" value="<%= character.char %>">
-        <input name="text" value="<%= character.name %>">
-        <input name="text" value="<%= character.personality %>">
-        <input name="text" value="<%= character.occupation %>">
-        <input name="text" value="<%= character.accessory %>">
+        
+        <input name="text" name= "char" value="<%= character.char %>">
+        <input name="text" name= "name"value="<%= character.name %>">
+        <input name="text" name= "personality"value="<%= character.personality %>">
+        <input name="text" name= "occupation"value="<%= character.occupation %>">
+        <input name="text" name= "accessory"value="<%= character.accessory %>">
         <button type="submit">UPDATE</button>
       </form>
-    
-   
      
+      <!-- not recieving data -->
