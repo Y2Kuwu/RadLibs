@@ -14,10 +14,27 @@ var methodOverride = require('method-override');
 
 var logger = require('morgan');
 
+var imgModel = require('./models/img');
+
 require('dotenv').config(); // for .env file
 require('./config/database');
 require('./config/passport');
 
+//
+// var multer = require('multer');
+//   //multer already installed use below
+// var storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'uploads')
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname + '-' + Date.now())
+//     }
+// });
+ 
+  //multer
+// var upload = multer({ storage: storage });
+  //
 
 var indexRouter = require('./routes/index');
 var characterRouter = require('./routes/characters');
@@ -42,6 +59,45 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+
+//multer get
+// app.get('/', (req, res) => {
+//   imgModel.find({}, (err, items) => {
+//       if (err) {
+//           console.log(err);
+//           res.status(500).send('An error occurred', err);
+//       }
+//       else {
+//           res.render('imagesPage', { items: items });
+//       }
+//   });
+// });
+//
+//
+// app.post('/', upload.single('image'), (req, res, next) => {
+  
+//   var obj = {
+//       name: req.body.name,
+//       desc: req.body.desc,
+//       img: {
+//           data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+//           contentType: 'image/png'
+//       }
+//   }
+//   imgModel.create(obj, (err, item) => {
+//       if (err) {
+//           console.log(err);
+//       }
+//       else {
+//           // item.save();
+//           res.redirect('/');
+//       }
+//   });
+// });
+//
+//
+
+
 
 //session logic//
 var session = require('express-session');  //maintaining session while user is logged in

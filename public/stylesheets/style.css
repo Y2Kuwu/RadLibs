@@ -4,13 +4,13 @@ body {
 }
 
 a {
-  color: white;
+  color: maroon;
   background-color: black;
 }
 #googimg{
   width: 20px;
   height: 20px;
-  background-color: black;
+  background-color: maroon;
 }
 #chars{
 background-color: black;
@@ -44,8 +44,42 @@ background-color: black;
   color: white;
 }
 #del{
-  text-align: center;
+  color: maroon;
+  font-family: Creepster;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 75px;
+  float: left; 
+  width: 15%;
+  height: 120px;
+
   background-color: black;
+}
+#showPage {
+  display: flex;
+  flex: 50%;
+}
+#newForm {
+  display: flex;
+  flex: 50%;
+}
+.dis{
+  background-color: red;
+  display: flex;
+  flex: 50%;
+  
+}
+.deets{
+  background-color: rgb(37, 30, 30);
+}
+#skully
+{
+  
+  width: 280px;
+  height: 280px;
+  margin-top: -12px;
+  margin-left: -100px;
 }
 
 
+<

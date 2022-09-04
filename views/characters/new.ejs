@@ -1,17 +1,19 @@
 
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/characters" method="POST">
+<form id="newForm" action="/characters" method="POST">
   <label>Character Type:</label>
-
   <select type="text" name="char" id = 'ch'>
-  <option value="()_()">()_()</option>
+  <option value="(.)_(.)">()_()</option>
   <option value="._.">._.</option>
   <option value="^_^">^_^</option>
   <option value="o~o">o~o</option>
   <option value="x_x">x_x</option>
+  <option value="|. _ .|">|. _ .|</option>
+  <option value="-*_*-">-*_*-</option>
+  <option value="!_!">!_!</option>
   </select>
-  <label>Name</label>
+  <label>Name:</label>
   <input type = "text" name="name" id = 'ch'>
   <label>Personality Trait:</label>
   <input type = "text" name="personality" id = 'ch'>
@@ -19,17 +21,17 @@
   <input type = "text" name="occupation" id = 'ch'>
   <label>Accessory:</label>
   <select type="text" name="accessory" id = 'ch'>
-    <option value="bowl">bowling ball</option>
-    <option value="scarf">lead scarf</option>
-    <option value="collection">spider collection</option>
-    <option value="job">a promising career</option>
+    <option value="bowl">Bowling ball</option>
+    <option value="scarf">Lead scarf</option>
+    <option value="collection">Spider collection</option>
+    <option value="job">A promising career</option>
     <option value="cd">The Wiggles TM greatest hits (multi disk, remastered) </option>
-    <option value="batteries">a handful of hearing aid batteries</option>
-    <option value="bat">wiffle bat</option>
-    <option value="hammock">hammock for ten</option>
-    <option value="change">spare change for that homeless guy you ignore on your way to work. You monster..</option>
-    <option value="beanie">beanie baby's baby</option>
-    <option value="reg">regrets</option>
+    <option value="batteries">A handful of hearing aid batteries</option>
+    <option value="bat">Wiffle bat</option>
+    <option value="hammock">Hammock for ten</option>
+    <option value="change">Spare change</option>
+    <option value="beanie">Beanie baby's baby</option>
+    <option value="reg">Regrets</option>
   
   <input type="submit" value="Add Character" id = 'ch'>
 </form>

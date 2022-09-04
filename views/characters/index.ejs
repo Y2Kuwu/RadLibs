@@ -2,9 +2,13 @@
 
     <% character.forEach(function(m) { %>
       <tr>
+        <div class = "dis">
         <td id = 'ne' ><%= m.name %></td>
         <td id = 'ch' >[<%= m.char %>]</td>
+        </div>
+        <div class = "deets">
         <td><a href="/characters/<%= m._id %>">[DETAILS]</a></td>
+        </div>
       </tr>
       <% }); %>
     </tbody>

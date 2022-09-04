@@ -5,27 +5,31 @@
 
 
  <form id="ed" action="/characters/<%= character._id %>?_method=PUT" method="POST">
+   
+    <section id="showPage">
+   
+    <div id = "ch">Character: <%= character.char %></div>
+    <div id = "ne">Name: <%= character.name %></div>
+    <div id = "pe">Personality trait(s): <%= character.personality %></div>
+    <div id = "oc">Occupation: <%= character.occupation %></div>
+    <div id = "ac">Accessory: <%= character.accessory %></div>
     
-    <section id="show-page">
-   <ul>
-    <li id = "ch">Character: <%= character.char %></li>
-    <li id = "ne">Name: <%= character.name %></li>
-    <li id = "pe">Personality trait(s): <%= character.personality %></li>
-    <li id = "oc">Occupation: <%= character.occupation %></li>
-    <li id = "ac">Accessory: <%= character.accessory %></li>
-    </ul>
+
 </form>
 </section>
-    
+
 
 
 
    
 </section>
-<form id="del" action="/characters/<%= character._id %>/delete?_method=DELETE" method="POST">
-    <button type = "submit">Delete</button>
+<form action="/characters/<%= character._id %>/delete?_method=DELETE" method="POST">
+    <img src="/images/skull.png" id = "skully">
+    <button type = "submit" id = 'del'>KILL</button>
+    
     </form>
 </section>
+
 
 
 

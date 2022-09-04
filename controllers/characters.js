@@ -17,14 +17,6 @@ function index(req, res){
   Character.findById(req.params.id, function(err ,character){
   res.render("characters/show", {character})
   character;
- 
-  // if(del){
-  //   character.deleteOne
-  // }
-  // if(updt){
-  //   character.findByIdAndUpdate
-  // }
-  // })
   });
 }
 
@@ -33,26 +25,6 @@ function index(req, res){
     res.render('characters/new')
   }
 
-  // function edit(req, res){
-  //   // Character.findById(req.params.id, function(err ,character){
-  //   // res.render("characters/edit", {character})
-  //   // character;
-  //   Character.findByIdAndUpdate(req.params.id, function(err ,character){
-  //     res.redirect("characters/:id/edit", {character})
-  //     character;
-  //   });
-  // // })
-  // }
-
-  // function die(req, res){
-  //   Character.findByIdAndDelete(req.params.id, function(err ,character){
-  //     // {_id: req.params.id, cre: req.user._id}, function(err) {
-  //       console.log(character)
-  //       res.redirect('/characters', {character});
-       
-  //     });
-  // }
-  
   function die(req, res) {
     Character.findByIdAndDelete(req.params.id, (err, character) => {
         // {_id: req.params.id, cre: req.user._id}, function(err) {
@@ -85,25 +57,6 @@ function index(req, res){
     });
   }
 
-  // var charMain = req.body.char;
-  // var charName = req.body.name;
-  // var charPers = req.body.personality;
-  // var charOccu = req.body.occupation;
-  // var charAcce = req.body.accessory;
-
-//   function create(req, res) {
-//     Character.findById(req.params.id, function(err, character){
-//     //  const character = new Character(req.body);
-//     character = req.user._id;
-//     // req.body.userId = req.user._id;
-//     // req.body.userName = req.user.name;
-//     // character.
-//     character.save(function(err) {
-//       if (err) return res.redirect('/characters/new');
-//       res.redirect(`/characters/${character._id}`);
-//     });
-//   })
-// }
 
   function create(req, res){
     //Character.findById(req.params.id, function(err, character){
@@ -138,6 +91,61 @@ module.exports = {
   die
  
 };
+// function edit(req, res){
+  //   // Character.findById(req.params.id, function(err ,character){
+  //   // res.render("characters/edit", {character})
+  //   // character;
+  //   Character.findByIdAndUpdate(req.params.id, function(err ,character){
+  //     res.redirect("characters/:id/edit", {character})
+  //     character;
+  //   });
+  // // })
+  // }
+
+  // function die(req, res){
+  //   Character.findByIdAndDelete(req.params.id, function(err ,character){
+  //     // {_id: req.params.id, cre: req.user._id}, function(err) {
+  //       console.log(character)
+  //       res.redirect('/characters', {character});
+       
+  //     });
+  // }
+
+
+
+
+
+  // if(del){
+  //   character.deleteOne
+  // }
+  // if(updt){
+  //   character.findByIdAndUpdate
+  // }
+  // })
+
+
+
+
+
+  // var charMain = req.body.char;
+  // var charName = req.body.name;
+  // var charPers = req.body.personality;
+  // var charOccu = req.body.occupation;
+  // var charAcce = req.body.accessory;
+
+//   function create(req, res) {
+//     Character.findById(req.params.id, function(err, character){
+//     //  const character = new Character(req.body);
+//     character = req.user._id;
+//     // req.body.userId = req.user._id;
+//     // req.body.userName = req.user.name;
+//     // character.
+//     character.save(function(err) {
+//       if (err) return res.redirect('/characters/new');
+//       res.redirect(`/characters/${character._id}`);
+//     });
+//   })
+// }
 
 
 
