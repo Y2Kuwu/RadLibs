@@ -2,33 +2,78 @@
 <%- include('../partials/header') %>
 
  <!-- PAGE NEEDS WORK -->
+ 
 
 
 
-   
-    <section id="showPage">
-   <div id = "all">
-    <div id = "ch">Character: <%= character.char %></div>
-    <div id = "ne">Name: <%= character.name %></div>
-    <div id = "pe">Personality trait(s): <%= character.personality %></div>
-    <div id = "oc">Occupation: <%= character.occupation %></div>
-    <div id = "ac">Accessory: <%= character.accessory %></div>
+ <form id="editForm" action="/characters" method="PUT">
+
     
 
+
+    <button onclick="showEl()">Edit</button> 
+    <section id="showPage">
+   <div id = "all">
+    <div id = "ch">Character: <%= character.char %>
+        <div id = 'hide'>
+        <select type="text" name="char" id = 'hide'>
+            <option value="(.)_(.)">()_()</option>
+            <option value="._.">._.</option>
+            <option value="^_^">^_^</option>
+            <option value="o~o">o~o</option>
+            <option value="x_x">x_x</option>
+            <option value="|. _ .|">|. _ .|</option>
+            <option value="-*_*-">-*_*-</option>
+            <option value="!_!">!_!</option>
+            </select>
+    </div>
+    </div>
+
+    <div id = "ne">Name: <%= character.name %>
+    <div id = 'hide'>
+    <input type = "text" name="name" id = 'ch'>
+    </div>
+    </div>
+
+    <div id = "pe">Personality trait(s): <%= character.personality %>
+    <div id = 'hide'>
+    <input type = "text" name="personality" id = 'ch'>
+    </div>
+
+    <div id = "oc">Occupation: <%= character.occupation %>
+    <div id = 'hide'>
+    <input type = "text" name="occupation" id = 'ch'>
+    </div>
+    </div>
+
+    <div id = "ac">Accessory: <%= character.accessory %>
+        <div id = 'hide'>
+        <select type="text" name="accessory" id = 'ch'>
+            <option value="bowl">Bowling ball</option>
+            <option value="scarf">Lead scarf</option>
+            <option value="collection">Spider collection</option>
+            <option value="job">A promising career</option>
+            <option value="cd">The Wiggles TM greatest hits (multi disk, remastered) </option>
+            <option value="batteries">A handful of hearing aid batteries</option>
+            <option value="bat">Wiffle bat</option>
+            <option value="hammock">Hammock for ten</option>
+            <option value="change">Spare change</option>
+            <option value="beanie">Beanie baby's baby</option>
+            <option value="reg">Regrets</option>
+            </select>
+    </div>
+    </div>
+        
+        <button type ="submit" id="saveEdit">Save Changes</button>
+
 </section>
-    <a href = "/characters/:id/edit">EDIT</a>
+</form>
 
 
 
-   
-</section>
 <form action="/characters/<%= character._id %>/delete?_method=DELETE" method="POST">
     <img src="/images/skull.png" id = "skully">
     <button type = "submit" id = 'del'>KILL</button>
-    
-    </form>
-</section>
-
 
 
 

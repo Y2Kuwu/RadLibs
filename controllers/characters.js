@@ -15,10 +15,10 @@ function index(req, res){
 }
 
 function create(req, res){
-  //Character.findById(req.params.id, function(err, character){
+// Character.findById(req.params.id, function(err, character){
   // const charNew = new Character(req.body);
   // charNew.userCheck = req.user._id;
-  charNew.save;
+  // charNew.save;
   Character.create({
     
  //
@@ -35,6 +35,7 @@ accessory: req.body.accessory
 
 });
 res.redirect("/characters");
+// });
 }
 
 
@@ -44,12 +45,12 @@ res.redirect("/characters");
   character;
   });
 }
-  function showEdit(req, res){
-    Character.findById(req.params.id, function(err ,character){
-    res.render("characters/edit", {character})
-    character;
-    });
-}
+//   function showEdit(req, res){
+//     Character.findById(req.params.id, function(err ,character){
+//     res.render("characters/edit", {character})
+//     character;
+//     });
+// }
   function newCharacter(req,res){
     res.render('characters/new')
   }
@@ -63,11 +64,10 @@ res.redirect("/characters");
 
 
   function edit(req, res){
-    Character.findByIdAndUpdate(req.params.id, (err, character)=> {
-      
+    //Character.findByIdAndUpdate(req.params.id, (err, character)=> {
+      Character.findByIdAndUpdate(req.params.id, function(err, character){
       console.log(character)
-      
-      res.redirect("/characters/:id/edit", {character})   //was render
+      res.redirect("/characters/:id", {character})   //was render
       character;
     });
   }
@@ -87,7 +87,19 @@ res.redirect("/characters");
       });
   }
 
+  // const showHide = document.getElementById("editShow");
+  
 
+  
+
+  function showEl(){
+    const hidden = document.getElementById("hide");
+    if (hidden.style.display === "none") {
+      hidden.style.display = "block";
+    } else {
+      hidden.style.display = "none";
+    }
+  }
  
 
 
@@ -102,7 +114,7 @@ module.exports = {
   edit,
   update,
   die,
-  showEdit,
+  showEl,
  
 };
 // function edit(req, res){
